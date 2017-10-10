@@ -1,0 +1,30 @@
+{
+  "name": "laoma",
+  "version": "1.0.0",
+  "description": "a webapp for laoma",
+  "main": "index.html",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xunyicao1008/laoma.git"
+  },
+  "author": "xyc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xunyicao1008/laoma/issues"
+  },
+  "homepage": "https://github.com/xunyicao1008/laoma#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0"
+  }
+}

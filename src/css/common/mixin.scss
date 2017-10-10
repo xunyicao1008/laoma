@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+//弹性布局
+@mixin flex($justify: flex-start, $align: flex-start, $wrap: nowrap){
+    //flex布局
+    display: flex;
+    display: -webkit-flex;
+    //横向单行/多行
+    flex-flow: row $wrap;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: $wrap;
+    //横向对齐方式
+    justify-content: $justify;
+    -webkit-justify-content:  $justify;
+    //纵向对齐方式
+    align-items: $align;
+    -webkit-align-items: $align;
+}
+
+//弹性布局(纵向)
+@mixin flex-column($justify: flex-start, $align: flex-start, $wrap: nowrap){
+    //flex布局
+    display: flex;
+    display: -webkit-flex;
+    //纵向单行/多行
+    flex-flow: column $wrap;
+    -webkit-flex-direction: column;
+    -webkit-flex-wrap: $wrap;
+    //纵向对齐方式
+    justify-content: $justify;
+    -webkit-justify-content:  $justify;
+    //横向对齐方式
+    align-items: $align;
+    -webkit-align-items: $align;
+}
+
+/**
+ * 文字多行截断
+ * @param  {Number} $lineNum 行数
+ */
+
+ @mixin text-truncate($lineNum:2) {
+    display: -webkit-box;
+    white-space: normal;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lineNum;
+    -webkit-box-orient: vertical;   
+}
