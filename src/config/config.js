@@ -1,4 +1,4 @@
-// 常量
+// 路径配置
 var root = {
     src: './src/**/*',
     dist: './dist/**/*'
@@ -7,6 +7,11 @@ var root = {
 var css = {
     src: './src/css/*.scss',
     dist: './dist/css'
+}
+
+var js = {
+    src: './src/js/*.js',
+    dist: './dist/js'
 }
 
 var img = {
@@ -19,9 +24,16 @@ var page = {
     dist: './dist/page'
 }
 
+var demo = {
+    src: './dist/**',
+    dist: './demo'    
+}
+
 module.exports = {
     root,
     css,
+    js,
     img,
-    page
+    page,
+    demo
 }

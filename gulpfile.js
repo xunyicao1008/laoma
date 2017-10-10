@@ -15,7 +15,7 @@ gulp.task('dev', function(){
 
 // 编译
 gulp.task('build', ['clean'], function(){
-    gulp.start(['build-css', 'build-img', 'build-page'], function(){
+    gulp.start(['build-css', 'build-js', 'build-img', 'build-page'], function(){
         console.log('静态编译 success')
     })  
 });
@@ -24,8 +24,15 @@ gulp.task('build', ['clean'], function(){
 gulp.task('build-css', function(){
     return gulp.src(config.css.src)
     .pipe(sass())
+    .on('error', swallowError)
     .pipe(minify())
     .pipe(gulp.dest(config.css.dist))
+});
+
+// 移动js
+gulp.task('build-js', function(){
+    return gulp.src(config.js.src)
+    .pipe(gulp.dest(config.js.dist))
 });
 
 // 移动page
@@ -45,3 +52,20 @@ gulp.task('clean', function(){
     return gulp.src(config.root.dist, {read: false})
     .pipe(clean());
 })
+
+// 生成demo
+gulp.task('build-demo', ['clean-demo'], function(){
+    return gulp.src(config.demo.src)
+    .pipe(gulp.dest(config.demo.dist))
+})
+
+// 清空demo
+gulp.task('clean-demo', function() {
+    return gulp.src(config.demo.dist, {read: false}).pipe(clean())
+})
+
+// 吃掉异常，防止watch监听 crash
+function swallowError(error) {
+    console.log(error.toString())
+    this.emit('end')
+}

@@ -1,12 +1,16 @@
 @import "./common/common.scss";
+
+// 常量
 $imgPath: '../img/';
+$pageSize: 1200;
+
 // 头部
 header {
     background: #008cd6;
     @include flex(center);
     .container {
         @include flex(flex-start, center);
-        width: 1200px;
+        width: #{$pageSize}px;
         height: 90px;
         // logo
         .brand {
@@ -26,6 +30,7 @@ header {
                 line-height: 24px;
                 text-align: center;
                 margin-left: 4px;
+                cursor: pointer;
                 &:first-child{
                     margin-left: 0;
                 }
@@ -48,21 +53,110 @@ header {
                 height: 20px;
                 line-height: 20px;
                 text-align: center;
+                border-radius: 10px;
+                font-size: 12px;
+                color: #ffffff;
+                cursor: pointer;
                 &.login {
-                    background: #008cd6;
+                    background: #086da0;
                 }
                 &.register {
+                    margin-left: 16px;
                     background: #64c9ff;
-                }
-                span {
-                    font-size: 12px;
-                    color: #ffffff;                    
                 }
             }
         } 
     }
 }
 
-.carousel {
+// 横幅
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    // 放横幅图片区域
+    .img-wrapper {
+        overflow: hidden;
+        font-size: 0;
+    }
+    // 按钮区域
+    .control-wrapper {
+        position: absolute;
+        width: #{$pageSize}px;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        margin-left: -#{$pageSize/2}px;
+        @include flex(space-between, center);
+        .banner-btn {
+            width: 36px;
+            height: 84px;
+            &.banner-btn-left {
+                background: url(#{$imgPath}banner-btn-left.png) center center no-repeat;
+                background-size: 100% 100%;                
+            }
+            &.banner-btn-right {
+                background: url(#{$imgPath}banner-btn-right.png) center center no-repeat;
+                background-size: 100% 100%;                
+            }            
+        }
+    }
+}
 
+// attach附加栏
+.attach {
+    width: 100%;
+    height: 70px;
+    @include flex(center, stretch);
+    // 附加内容显示区域
+    .content-wrapper {
+        width: #{$pageSize}px;
+        height: 100%;
+        @include flex(space-between, center);
+        // 左侧统计
+        .statistics-box {
+            @include flex(flex-start, center);
+            .statistics-num {
+                @include flex();
+                margin-left: 10px;
+                .num-item {
+                    width: 20px;
+                    height: 32px;
+                    line-height: 32px;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #ffffff;
+                    background: #008cd6;
+                    text-align: center;
+                    margin-left: 2px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+            .statistics-text {
+                margin-left: 14px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #666666;
+                &.postfix-text {
+                    margin-left: 8px;
+                }
+            }
+        }   
+        .date-box {
+            .statistics-text {
+                font-size: 18px;
+                font-weight: bold;
+                color: #666666;
+            }
+        } 
+    }
+}
+
+// 服务栏
+.service {
+    width: 100%;
+    height: 430px;
+    background: #f2f2f2;
 }
