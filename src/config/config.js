@@ -1,7 +1,7 @@
 // 路径配置
 var root = {
-    src: './src/**/*',
-    dist: './dist/**/*'
+    src: './src/**',
+    dist: './dist/**'
 }
 
 var css = {
@@ -10,7 +10,7 @@ var css = {
 }
 
 var js = {
-    src: './src/js/*.js',
+    src: './src/js/**',
     dist: './dist/js'
 }
 
@@ -20,7 +20,7 @@ var img = {
 }
 
 var page = {
-    src: './src/page/*',
+    src: './src/page/**',
     dist: './dist/page'
 }
 

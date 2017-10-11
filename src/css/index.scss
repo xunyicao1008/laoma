@@ -75,9 +75,23 @@ header {
     width: 100%;
     height: 400px;
     // 放横幅图片区域
-    .img-wrapper {
-        overflow: hidden;
-        font-size: 0;
+    .swiper-container {
+        .img-item {
+            width: 100%;
+            height: 400px;
+            &.bg1 {
+                background: url(#{$imgPath}banner1.png) center center no-repeat;
+                background-size: cover;
+            }
+            &.bg2 {
+                background: url(#{$imgPath}banner2.png) center center no-repeat;
+                background-size: cover;
+            }
+            &.bg3 {
+                background: url(#{$imgPath}banner3.png) center center no-repeat;
+                background-size: cover;
+            }           
+        }
     }
     // 按钮区域
     .control-wrapper {
@@ -87,17 +101,27 @@ header {
         top: 0;
         left: 50%;
         margin-left: -#{$pageSize/2}px;
+        z-index: 1000;
         @include flex(space-between, center);
         .banner-btn {
             width: 36px;
             height: 84px;
+            cursor: pointer;
             &.banner-btn-left {
                 background: url(#{$imgPath}banner-btn-left.png) center center no-repeat;
-                background-size: 100% 100%;                
+                background-size: 100% 100%;
+                &.active {
+                    background: url(#{$imgPath}banner-btn-left-active.png) center center no-repeat;
+                    background-size: 100% 100%;                    
+                }                
             }
             &.banner-btn-right {
                 background: url(#{$imgPath}banner-btn-right.png) center center no-repeat;
-                background-size: 100% 100%;                
+                background-size: 100% 100%;   
+                &.active {
+                    background: url(#{$imgPath}banner-btn-right-active.png) center center no-repeat;
+                    background-size: 100% 100%;                    
+                }                              
             }            
         }
     }
@@ -158,5 +182,80 @@ header {
 .service {
     width: 100%;
     height: 430px;
+    @include flex-column(flex-start, center);
     background: #f2f2f2;
+    .main-title {
+        margin-top: 50px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #3e3e3e;
+    }
+    .sub-title {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #3e3e3e;
+    }
+    .service-box {
+        margin-top: 30px;
+        @include flex();
+        .service-item  {
+            width: 290px;
+            height: 258px;
+            background: #ffffff;
+            padding: 6px;
+            margin: 0 5px;
+            &.active {
+                box-shadow: 1px 1px 4px 1px rgba(103,103,103,.75);
+            }
+            .item-bg {
+                width: 278px;
+                height: 156px;
+                &.bg-safe {
+                    background: url(#{$imgPath}service-bg-safe.png) center center no-repeat;
+                    background-size: 100% 100%;
+                }
+                &.bg-low {
+                    background: url(#{$imgPath}service-bg-low.png) center center no-repeat;
+                    background-size: 100% 100%;
+                }
+                &.bg-claim {
+                    background: url(#{$imgPath}service-bg-claim.png) center center no-repeat;
+                    background-size: 100% 100%;
+                }
+                &.bg-info {
+                    background: url(#{$imgPath}service-bg-info.png) center center no-repeat;
+                    background-size: 100% 100%;
+                }                                                
+            }
+            .item-btn {
+                margin: 20px auto 0;
+                width: 170px;
+                height: 40px;
+                line-height: 40px;
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                &.orange {
+                    background: url(#{$imgPath}service-btn-bg-orange.png) center center no-repeat;
+                    background-size: 100% 100%;                    
+                }
+                &.blue {
+                    background: url(#{$imgPath}service-btn-bg-blue.png) center center no-repeat;
+                    background-size: 100% 100%;                    
+                }
+                &.pink {
+                    background: url(#{$imgPath}service-btn-bg-pink.png) center center no-repeat;
+                    background-size: 100% 100%;                    
+                }
+                &.green {
+                    background: url(#{$imgPath}service-btn-bg-green.png) center center no-repeat;
+                    background-size: 100% 100%;                    
+                }       
+                p {
+                    text-align: center;
+                }                                         
+            }
+        }
+    }
 }

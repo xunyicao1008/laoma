@@ -1,7 +1,7 @@
 // 引入gulp插件
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var clean = require('gulp-clean');
+var del = require('del')
 var minify = require('gulp-minify-css');
 
 // config
@@ -49,8 +49,7 @@ gulp.task('build-img', function(){
 
 // 清空dist
 gulp.task('clean', function(){
-    return gulp.src(config.root.dist, {read: false})
-    .pipe(clean());
+    return del([config.root.dist])
 })
 
 // 生成demo
@@ -61,7 +60,7 @@ gulp.task('build-demo', ['clean-demo'], function(){
 
 // 清空demo
 gulp.task('clean-demo', function() {
-    return gulp.src(config.demo.dist, {read: false}).pipe(clean())
+    return del([config.demo.dist])
 })
 
 // 吃掉异常，防止watch监听 crash

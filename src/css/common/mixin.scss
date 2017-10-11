@@ -38,7 +38,6 @@
  * 文字多行截断
  * @param  {Number} $lineNum 行数
  */
-
  @mixin text-truncate($lineNum:2) {
     display: -webkit-box;
     white-space: normal;
