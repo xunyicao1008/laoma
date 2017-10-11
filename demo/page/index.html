@@ -48,8 +48,12 @@
     <!-- banner栏 -->
     <section class="banner">
         <!-- 放横幅图片区域 -->
-        <div class="img-wrapper">
-            <img src="../img/banner1.png" alt="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide img-item bg1"></div>
+                <div class="swiper-slide img-item bg2"></div>
+                <div class="swiper-slide img-item bg3"></div>
+            </div>
         </div>
         <!-- 按钮区域 -->
         <div class="control-wrapper">
@@ -66,23 +70,13 @@
                 <div class="statistics-text">
                     截至目前为止投保单数 :
                 </div>
-                <div class="statistics-num">
-                    <span class="num-item">0</span>
-                    <span class="num-item">1</span>
-                    <span class="num-item">2</span>
-                    <span class="num-item">3</span>
-                    <span class="num-item">5</span>
-                    <span class="num-item">6</span>
-                    <span class="num-item">2</span>
-                </div>
-                <div class="statistics-text postfix-text">
-                    单
-                </div>
+                <div class="statistics-num"></div>
+                <div class="statistics-text postfix-text">单</div>
             </div>
             <!-- 右侧日期 -->
             <div class="date-box">
                 <div class="statistics-text">
-                    数据截止至 : 2017-09-28
+                    数据截止至 : <span>2017-09-28</span>
                 </div>
             </div>
         </div>
@@ -90,21 +84,203 @@
 
     <!-- 服务栏 -->
     <section class="service">
+        <div class="main-title">我们提供这样的服务</div>
+        <div class="sub-title">OUR SERVICE</div>
+        <div class="service-box">
+            <div class="service-item">
+                <div class="item-bg bg-safe"></div>
+                <div class="item-btn orange">
+                    <p>了解详情</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="item-bg bg-claim"></div>
+                <div class="item-btn blue">
+                    <p>快速索赔</p>
+                </div>
+            </div>        
+            <div class="service-item">
+                <div class="item-bg bg-low"></div>
+                <div class="item-btn pink">
+                    <p>寻求帮助</p>
+                </div>
+            </div>        
+            <div class="service-item">
+                <div class="item-bg bg-info"></div>
+                <div class="item-btn green">
+                    <p>了解详情</p>
+                </div>
+            </div>                    
+        </div>
+    </section>
+
+    <!-- 平台栏 -->
+    <section class="platform">
+        <div class="main-title">高端平台&nbsp;专业服务</div>
+        <div class="sub-title">OUR PLATFORM</div>
+        <div class="platform-box">
+            <div class="platform-item orange">
+                <div class="item-corner">
+                    <img src="../img/icon-insured.png" alt="insured">
+                </div>
+                <div class="item-describe">
+                    <p class="title-h1">投保</p>
+                    <p class="title-h2">INSURED</p>
+                    <p class="title-h3">></p>
+                </div>
+                <div class="item-btn">查看详情</div>
+            </div>
+            <div class="platform-item item-type item-type-2">
+                <div class="item-content">
+                    <p class="title1">没有不能保的货物</p>
+                    <p class="title2">适合精密仪器等</p>
+                    <p class="title3">
+                        最低<span class="red">30,000</span>起
+                    </p>
+                </div>
+                <div class="item-btn">查看详情</div>
+            </div> 
+            <div class="platform-item item-type item-type-2">
+                <div class="item-content">
+                    <p class="title1">NVOCC</p>
+                    <p class="title1">无船承运人责任险</p>
+                    <img class="item-img1" src="../img/platform-item-img1.png" alt="无船承运人责任险">
+                </div>
+                <div class="item-btn">查看详情</div>
+            </div> 
+            <div class="platform-item item-type item-type-2">
+                <div class="item-content">
+                    <p class="title1">货代责任险</p>
+                    <p class="title4">
+                        必赔<span class="red">10,000</span>起
+                    </p>
+                    <img class="item-img2" src="../img/platform-item-img2.png" alt="货代责任险">
+                </div>
+                <div class="item-btn">查看详情</div>
+            </div>                                      
+        </div>
         
+        <div class="platform-box">
+            <div class="platform-item blue">
+                <div class="item-corner">
+                    <img src="../img/icon-claim.png" alt="claim">
+                </div>
+                <div class="item-describe">
+                    <p class="title-h1">理赔</p>
+                    <p class="title-h2">CLAIM</p>
+                    <p class="title-h3">></p>
+                </div>
+                <div class="item-btn">查看详情</div>
+            </div>
+            <div class="platform-item item-type item-type-2">
+                <div class="item-content">
+                    <p class="title1">没有不能保的货物</p>
+                    <p class="title2">适合精密仪器等</p>
+                    <p class="title3">
+                        最低<span class="red">30,000</span>起
+                    </p>
+                </div>
+                <div class="item-btn">查看详情</div>
+            </div> 
+            <div class="platform-item item-type item-type-2">
+                <div class="item-content">
+                    <p class="title1">NVOCC</p>
+                    <p class="title1">无船承运人责任险</p>
+                    <img class="item-img1" src="../img/platform-item-img1.png" alt="无船承运人责任险">
+                </div>
+                <div class="item-btn">查看详情</div>
+            </div> 
+            <div class="platform-item item-type item-type-2">
+                <div class="item-content">
+                    <p class="title1">货代责任险</p>
+                    <p class="title4">
+                        必赔<span class="red">10,000</span>起
+                    </p>
+                    <img class="item-img2" src="../img/platform-item-img2.png" alt="货代责任险">
+                </div>
+                <div class="item-btn">查看详情</div>
+            </div>                                      
+        </div>          
     </section>
 
 </body>
 <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/swiper/swiper-3.4.2.jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/swiper/swiper-3.4.2.min.css" />
 <script type="text/javascript">
     $(document).ready(function(){
+
+        // 模拟服务端业务的数据
+        var data = {
+            statistics: {
+                count: 123562,
+                date: '2017-09-28'
+            }
+        };
+
+        // 头部导航效果
         $('.nav .nav-item').hover(
             function(){
-                $(this).addClass('active').siblings().removeClass('active')
+                $(this).addClass('active').siblings().removeClass('active');
             },
             function(){
-                $(this).removeClass('active')
+                $(this).removeClass('active');
             }
-        )
+        );
+        
+        // banner按钮效果
+        $('.banner .banner-btn').hover(
+            function(){
+                $(this).addClass('active').siblings().removeClass('active');
+            },
+            function(){
+                $(this).removeClass('active');
+            }            
+        );
+
+        // service的hover效果
+        $('.service-box .service-item').hover(
+            function(){
+                $(this).addClass('active').siblings().removeClass('active');
+            },
+            function(){
+                $(this).removeClass('active');
+            }            
+        );
+
+        // swiper
+        var swiper = new Swiper('.swiper-container', {
+            autoplay : 5000,
+            onlyExternal : true,
+            prevButton: '.banner-btn-left',
+            nextButton: '.banner-btn-right'
+        });
+
+        // 渲染attach栏
+        function renderAttach(data) {
+            var maxLength = 7; // 最长7位数字
+            var count = ((data && data.count) || 0) + ''
+            var len = count.length;
+            var prefix0 = ''; // 左补0操作
+            if (len < maxLength) {
+                var diff = maxLength - len;
+                while (diff > 0) {
+                    diff--;
+                    prefix0 += '0';
+                }
+            } else { // 超过最大长度则舍弃低位数字
+                count = count.substring(0, maxLength)
+            }
+            count = prefix0 + count;
+            var html = ''; // 数字html片段
+            count.match(/\w/g).forEach(function(item){
+                html += '<span class="num-item">' + item + '</span>'
+            });
+            $('.statistics-num').html(html);
+            $('.attach .date-box .statistics-text span').html(data.date);
+        }
+
+        renderAttach(data.statistics);
     })
 </script>
 </html>
