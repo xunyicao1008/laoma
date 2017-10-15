@@ -15,7 +15,7 @@
             <div class="brand"></div>
             <!-- 导航 -->
             <div class="nav">
-                <div class="nav-item">
+                <div class="nav-item" data-href="/">
                     <span>首页</span>
                 </div>
                 <div class="nav-item">
@@ -33,7 +33,7 @@
             </div>
             <!-- 导航登录 -->
             <div class="nav-right">
-                <div class="nav-right-item login">
+                <div class="nav-right-item login" data-href="/page/login.html">
                     登录
                 </div>
                 <div class="nav-right-item register">
@@ -415,6 +415,16 @@
                 $(this).removeClass('active');
             }
         );
+
+        // 导航点击
+        $('.nav .nav-item').click(function(){
+            var href = $(this).data('href');
+            href && (window.location.href = href);
+        });
+        $('.nav-right .nav-right-item').click(function(){
+            var href = $(this).data('href');
+            href && (window.location.href = href);
+        });
         
         // banner按钮效果
         $('.banner .banner-btn').hover(
