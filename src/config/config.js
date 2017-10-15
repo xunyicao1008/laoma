@@ -5,7 +5,7 @@ var root = {
 }
 
 var css = {
-    src: './src/css/*.scss',
+    src: './src/css/**',
     dist: './dist/css'
 }
 

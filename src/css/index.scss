@@ -1,4 +1,5 @@
 @import "./common/common.scss";
+@import "./common/rest.scss";
 
 // 常量
 $imgPath: '../img/';
@@ -8,70 +9,7 @@ body {
     background: #f2f2f2;
 }
 
-// 头部
-header {
-    background: #008cd6;
-    @include flex(center);
-    .container {
-        @include flex(flex-start, center);
-        width: #{$pageSize}px;
-        height: 90px;
-        // logo
-        .brand {
-            width: 170px;
-            height: 50px;
-            background: url(#{$imgPath}brand.png) center center no-repeat;
-            background-size: 100% 100%;
-        }
-        // 导航
-        .nav {
-            margin-left: 220px;
-            @include flex(flext-start, center);
-            // 导航项
-            .nav-item {
-                width: 100px;
-                height: 24px;
-                line-height: 24px;
-                text-align: center;
-                margin-left: 4px;
-                cursor: pointer;
-                &:first-child{
-                    margin-left: 0;
-                }
-                &.active {
-                    background: url(#{$imgPath}nav-item-active.png) center center no-repeat;
-                    background-size: 100% 100%;
-                }
-                span {
-                    font-size: 16px;
-                    color: #ffffff;
-                }
-            }
-        }
-        // 右侧导航
-        .nav-right {
-            flex: 1;
-            @include flex(flex-end);
-            .nav-right-item {
-                width: 54px;
-                height: 20px;
-                line-height: 20px;
-                text-align: center;
-                border-radius: 10px;
-                font-size: 12px;
-                color: #ffffff;
-                cursor: pointer;
-                &.login {
-                    background: #086da0;
-                }
-                &.register {
-                    margin-left: 16px;
-                    background: #64c9ff;
-                }
-            }
-        } 
-    }
-}
+@import "./common/header.scss";
 
 // 横幅
 .banner {
@@ -186,7 +124,7 @@ header {
 // 服务栏
 .service {
     width: 100%;
-    height: 430px;
+    height: 266px;
     @include flex-column(flex-start, center);
     .main-title {
         margin-top: 50px;
@@ -204,16 +142,16 @@ header {
         @include flex();
         .service-item  {
             width: 290px;
-            height: 258px;
             background: #ffffff;
             padding: 6px;
             margin: 0 5px;
+            cursor: pointer;
             &.active {
                 box-shadow: 1px 1px 4px 1px rgba(103,103,103,.75);
             }
             .item-bg {
                 width: 278px;
-                height: 156px;
+                height: 170px;
                 &.bg-safe {
                     background: url(#{$imgPath}service-bg-safe.png) center center no-repeat;
                     background-size: 100% 100%;
@@ -315,7 +253,7 @@ header {
             background-size: 100% 100%;  
             color: #ffffff;  
             .item-content {
-                margin-top: 5px;
+                margin-top: 30px;
                 margin-left: 59px;
                 .box1 {
                     font-size: 40px;
@@ -346,7 +284,7 @@ header {
                 color: #008cd6;
             }             
             .item-content {
-                margin-top: 5px;
+                margin-top: 30px;
                 margin-left: 59px;
                 .box1 {
                     font-size: 40px;
@@ -488,7 +426,7 @@ header {
             height: 106px;
             border: 1px solid #c9c9c9;
             @include flex-column(center, center);
-            margin-bottom: 4px;
+            margin-bottom: 5px;
             background: #ffffff;
             cursor: pointer;
             &.active {
@@ -857,113 +795,4 @@ header {
     }    
 }
 
-// 页尾
-footer {
-    height: 466px;
-    background: #242424;
-    .footer-main {
-        width: #{$pageSize}px;
-        height: 380px;
-        margin: 0 auto;
-        @include flex(space-between);
-        .company-info {
-            padding-top: 48px;
-            .company-logo {
-                width: 170px;
-                height: 50px;
-                @include background('#{$imgPath}brand.png');
-            }
-            .contact-way {
-                padding-top: 48px;
-                p {
-                    font-size: 18px;
-                    color: #ffffff;
-                    line-height: 1;
-                    margin-bottom: 14px;
-                    @include flex(flex-start, center);
-                    &.tel {
-                        font-size: 28px;
-                        color: #008cd6;
-                    }
-                    i {
-                        width: 26px;
-                        height: 26px;
-                        &.icon-address {
-                            @include background('#{$imgPath}icon-address.png');
-                        }
-                        &.icon-tel {
-                            @include background('#{$imgPath}icon-tel.png');
-                        }
-                        &.icon-email {
-                            @include background('#{$imgPath}icon-email.png');
-                        }
-                    }
-                    span {
-                        padding-left: 12px;
-                    }
-                }
-            }
-        }
-        .navigation {
-            padding-top: 60px;
-            @include flex();
-            .nav-list {
-                @include flex-column(flex-start, flex-end);
-                &.horizontal {
-                    @include flex-column(flex-start, flex-start);
-                    .nav-line {
-                        margin-bottom: 0;
-                    }
-                }
-                .nav-line {
-                    width: 38px;
-                    height: 2px;
-                    background: #ffffff;
-                    margin-bottom: 24px;
-                }
-                .nav-item {
-                    width: 74px;
-                    font-size: 18px;
-                    color: #ffffff;
-                    text-align: right;
-                    margin-bottom: 18px;
-                    cursor: pointer;
-                }
-                .icon-list {
-                    @include flex();
-                    margin-top: 26px;
-                    i {
-                        width: 44px;
-                        height: 44px;
-                        margin-left: 10px;
-                        cursor: pointer;
-                        &:first-child {
-                            margin-left: 0;
-                        }
-                        &.icon-wb {
-                            @include background('#{$imgPath}icon-wb.png');
-                        }
-                        &.icon-wx {
-                            @include background('#{$imgPath}icon-wx.png');
-                        }  
-                        &.icon-qq {
-                            @include background('#{$imgPath}icon-qq.png');
-                        }                      
-                    }
-                }
-            }
-            .nav-list + .nav-list {
-                margin-left: 130px;
-            }
-        }
-    }
-    .copyright {
-        height: 86px;
-        background: #1e1e1e;
-        @include flex-column(center, center);
-        p {
-            font-size: 12px;
-            color: #ffffff;
-        }
-    }
-}
+@import "./common/footer.scss";

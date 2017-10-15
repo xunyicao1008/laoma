@@ -1,0 +1,132 @@
+@import "./common/common.scss";
+@import "./common/rest.scss";
+
+// 常量
+$imgPath: '../img/';
+$pageSize: 1200;
+
+@import "./common/header.scss";
+
+// 登录视图
+.view-login {
+    width: 100%;
+    height: 550px;
+    @include background('#{$imgPath}login-banner.png');
+    background-size: auto;
+    .login-wrapper {
+        width: #{$pageSize}px;
+        @include flex(flex-end);
+        margin: 0 auto;
+        .login-box {
+            margin-top: 74px;
+            width: 380px;
+            height: 400px;
+            background: #ffffff;
+            padding: 0 30px;
+            position: relative;
+            .pc-box, .mobile-box {
+                display: none;
+                &.active {
+                    display: block;
+                }
+            }
+            .login-switch {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 75px;
+                height: 75px;
+                cursor: pointer;
+                &.active {
+                    display: block;
+                }
+                &.mobile {
+                    @include background('#{$imgPath}login-switch-mobile.png');
+                }
+                &.pc {
+                    @include background('#{$imgPath}login-switch-pc.png');
+                }
+                .switch-tips {
+                    display: none;
+                    position: absolute;
+                    width: 140px;
+                    height: 23px;
+                    top: 8px;
+                    right: 65px;
+                    @include background('#{$imgPath}switch-tips.png');
+                }
+            }
+            .login-title {
+                margin-top: 32px;
+                @include font(22px, #161616, bold);
+                line-height: 1;
+            }
+            .form-group {
+                margin-top: 26px;
+                .form-input-item {
+                    margin-top: 14px;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    input {
+                        width: 100%;
+                        height: 50px;
+                        line-height: 50px;
+                        @include font(14px, #9e9e9e);
+                        border: 1px solid #aaaaaa;
+                        padding-left: 16px;
+                        &.active {
+                            border: 1px solid #008cd6;
+                        }
+                    }
+                    .valid-box {
+                        @include flex();
+                        .valid-input {
+                            width: 180px;
+                        }
+                        .valid-img {
+                            margin-left: 10px;
+                            width: 130px;
+                            height: 50px;
+                            cursor: pointer;
+                        }
+                    }
+                    .msg-box {
+                        @include flex();
+                        .msg-input {
+                            width: 180px;
+                        }
+                        .msg-img {
+                            margin-left: 10px;
+                            width: 130px;
+                            height: 50px;
+                            cursor: pointer;
+                            @include background('#{$imgPath}msg-img.png');
+                            text-align: center;
+                            @include flex(center, center);
+                            @include font(14px, #ffffff);
+                        }
+                    }                    
+                }
+                .form-btn-item {
+                    margin-top: 22px;
+                    width: 320px;
+                    height: 50px;
+                    line-height: 50px;
+                    @include font(16px, #ffffff, bold);
+                    @include background('#{$imgPath}login-btn-bg.png');
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+            .login-tips {
+                margin-top: 10px;
+                @include flex(space-between);
+                @include font(14px, #161616);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@import "./common/footer.scss";
