@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>公司网站</title>
+    <link rel="stylesheet" type="text/css" href="../css/claim.css" />
+</head>
+<body>
+    <!-- header头 -->
+    <header>
+        <div class="container">
+            <!-- logo -->
+            <div class="brand"></div>
+            <!-- 导航 -->
+            <div class="nav">
+                <div class="nav-item" data-href="/">
+                    <span>首页</span>
+                </div>
+                <div class="nav-item">
+                    <span>买保险</span>
+                </div>    
+                <div class="nav-item">
+                    <span>快索赔</span>
+                </div> 
+                <div class="nav-item">
+                    <span>法律服务</span>
+                </div> 
+                <div class="nav-item">
+                    <span>信息咨询</span>
+                </div>                               
+            </div>
+            <!-- 导航登录 -->
+            <div class="nav-right">
+                <div class="nav-right-item login" data-href="/page/login.html">
+                    登录
+                </div>
+                <div class="nav-right-item register">
+                    注册
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- banner -->
+    <section class="view-claim">
+        <div class="claim-wrapper">
+            <div class="claim-box">
+                <div class="claim-img">
+                    <img src="../img/claim-tel.png" alt="claim">
+                </div>
+                <div class="claim-text">
+                    理赔热线： 021-61498861
+                </div>
+                <div class="claim-cut-line"></div>
+                <div class="claim-main">
+                    <div class="claim-btn-wrapper">
+                        <div class="go-claim">
+                            我要索赔
+                        </div>
+                        <div class="query-claim">
+                            查询进度
+                        </div>
+                    </div>
+                    <div class="claim-tips">
+                        登录后才能进行理赔与进度查询
+                    </div>
+                    <div class="claim-more-link">
+                        <i class="icon-claim-question"></i>
+                        <span>理赔方法学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 表单面板 -->
+    <section class="pannel">
+        
+    </section>
+
+    <!-- 页尾 -->
+    <footer>
+        <div class="footer-main">
+            <div class="company-info">
+                <div class="company-logo"></div>
+                <div class="contact-way">
+                    <p><i class="icon-tel"></i><span>全国服务热线</span></p>
+                    <p class="tel">400-000-0000</p>
+                    <p><i class="icon-address"></i><span>上海市 浦东新区某某路某某号8楼</span></p>
+                    <p><i class="icon-email"></i><span>123123123@qq.com</span></p>
+                </div>
+            </div>
+            <div class="navigation">
+                <div class="nav-list">
+                    <div class="nav-line"></div>
+                    <div class="nav-item">首页</div>
+                    <div class="nav-item">买保险</div>
+                    <div class="nav-item">快索赔</div>
+                    <div class="nav-item">法律服务</div>
+                    <div class="nav-item">信息咨询</div>
+                </div>
+                <div class="nav-list horizontal">
+                    <div class="nav-line"></div>
+                    <div class="icon-list">
+                        <i class="icon-wb"></i>
+                        <i class="icon-wx"></i>
+                        <i class="icon-qq"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>版权所有 © 运可安科技有限公司 未经许可不得复制、转载或摘编，违者必究！</p>
+            <p>Copyright © PING AN INSURANCE(GROUP) COMPANY OF CHINA,LTD. All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        // 头部导航效果
+        $('.nav .nav-item').hover(
+            function(){
+                $(this).addClass('active').siblings().removeClass('active');
+            },
+            function(){
+                $(this).removeClass('active');
+            }
+        );
+
+        // 导航点击
+        $('.nav .nav-item').click(function(){
+            var href = $(this).data('href');
+            href && (window.location.href = href);
+        });
+        $('.nav-right .nav-right-item').click(function(){
+            var href = $(this).data('href');
+            href && (window.location.href = href);
+        });
+
+    })
+</script>
+</html>

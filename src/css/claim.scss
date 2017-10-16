@@ -1,0 +1,101 @@
+@import "./common/common.scss";
+@import "./common/rest.scss";
+
+// 常量
+$imgPath: '../img/';
+$pageSize: 1200;
+
+body {
+    background: #f2f2f2;
+}
+
+@import "./common/header.scss";
+
+// view-claim
+.view-claim {
+    width: 100%;
+    height: 400px;
+    @include background('#{$imgPath}claim-banner.png');
+    background-size: auto;
+    .claim-wrapper {
+        width: #{$pageSize}px;
+        height: 400px;
+        @include flex(flex-end, center);
+        margin: 0 auto;
+        .claim-box {
+            width: 270px;
+            height: 284px;
+            margin-right: 20px;
+            padding-top: 36px;
+            background: #ffffff;
+            .claim-img {
+                @include flex(center);
+                img {
+                    width: 68px;
+                    height: 68px;
+                }
+            }
+            .claim-text {
+                margin-top: 10px;
+                text-align: center;
+                @include font(16px, #161616);
+                line-height: 1;
+            }
+            .claim-cut-line {
+                margin-top: 14px;
+                height: 1px;
+                background: #f2f2f2;
+            }
+            .claim-main {
+                padding: 0 32px;
+            }
+            .claim-btn-wrapper {
+                margin-top: 10px;
+                @include flex(space-between);
+                @include font(14px, #ffffff, bold);
+                .go-claim {
+                    width: 96px;
+                    height: 36px;
+                    line-height: 36px;
+                    @include background('#{$imgPath}go-claim-bg.png');
+                    text-align: center;
+                    cursor: pointer;
+                }
+                .query-claim {
+                    width: 96px;
+                    height: 36px;
+                    line-height: 36px;
+                    @include background('#{$imgPath}query-claim-bg.png');
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+            .claim-tips {
+                margin-top: 8px;
+                @include font(12px, #9e9e9e);
+            }
+            .claim-more-link {
+                margin-top: 26px;
+                @include font(14px, #008cd6);
+                @include flex(flex-end, center);
+                .icon-claim-question {
+                    width: 14px;
+                    height: 14px;
+                    @include background('#{$imgPath}icon-claim-question.png');
+                }
+                span {
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+}
+
+.pannel {
+    width: #{$pageSize}px;
+    height: 400px; // test
+    margin: 30px auto 40px;
+    background: #ffffff;
+}
+
+@import "./common/footer.scss";
