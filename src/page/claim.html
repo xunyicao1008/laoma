@@ -88,7 +88,7 @@
             <!-- 表单 -->
             <div class="form-container">
                 <div class="form-group">
-                    <label for="">请输入您的手机号码</label>
+                    <label class="label" for="">请输入您的手机号码</label>
                     <div class="input-wrapper md">
                         <input type="text" placeholder="请输入手机号码">
                     </div>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="">请选择您的损失类型</label>
+                    <label class="label" for="">请选择您的损失类型</label>
                     <div class="input-wrapper md">
                         <select name="" id="">
                             <option value="1">货损/货物丢失</option>
@@ -111,7 +111,7 @@
                 <div class="row">
                     <div class="col lg">
                         <div class="form-group">
-                            <label for="">请输入希望启动的保单号</label>
+                            <label class="label" for="">请输入希望启动的保单号</label>
                             <div class="input-wrapper">
                                 <input type="text" placeholder="保单号">
                             </div>
@@ -119,7 +119,7 @@
                     </div>
                     <div class="col md">
                         <div class="form-group">
-                            <label for="">或者（订单编号）</label>
+                            <label class="label" for="">或者（订单编号）</label>
                             <div class="input-wrapper">
                                 <input type="text" placeholder="编号">
                             </div>
@@ -127,7 +127,7 @@
                     </div>
                     <div class="col md">
                         <div class="form-group">
-                            <label for="">或者（提单号）</label>
+                            <label class="label" for="">或者（提单号）</label>
                             <div class="input-wrapper">
                                 <input type="text" placeholder="或者（提单号）">
                             </div>
@@ -138,7 +138,7 @@
                 <div class="row">
                     <div class="col md">
                         <div class="form-group">
-                            <label for="">请选择您的称呼</label>
+                            <label class="label" for="">请选择您的称呼</label>
                             <div class="input-wrapper">
                                 <input type="text" placeholder="称呼">
                             </div>
@@ -146,7 +146,7 @@
                     </div>
                     <div class="col md">
                         <div class="form-group">
-                            <label for="">请输入您的姓名</label>
+                            <label class="label" for="">请输入您的姓名</label>
                             <div class="input-wrapper">
                                 <input type="text" placeholder="姓名">
                             </div>
@@ -154,7 +154,7 @@
                     </div>
                     <div class="col md">
                         <div class="form-group">
-                            <label for="">请输入您的工作邮箱</label>
+                            <label class="label" for="">请输入您的工作邮箱</label>
                             <div class="input-wrapper">
                                 <input type="text" placeholder="邮箱">
                             </div>
@@ -163,6 +163,141 @@
                 </div>                
 
             </div>
+
+            <!-- 表单 -->
+            <div class="form-container">
+                <div class="form-title">货损/货物丢失案件信息</div>                
+                <div class="row">
+                    <div class="col md">
+                        <div class="form-group">
+                            <label class="label" for="">1.货损时间</label>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="年-月-日">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col long">
+                        <div class="form-group">
+                            <label class="label" for="">2.货损区段</label>
+                            <div class="input-wrapper">
+                                <select name="" id="">
+                                    <option value="1">主要输段</option>
+                                    <option value="2">22222222222</option>
+                                    <option value="3">3333333333</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="1">海运</option>
+                                    <option value="2">22222222222</option>
+                                    <option value="3">3333333333</option>
+                                </select>                                
+                            </div>
+                        </div>                        
+                    </div>                  
+                </div>
+                <div class="form-group">
+                    <label class="label" for="">3.货损地点</label>
+                    <div class="input-wrapper long">
+                        <input type="text" placeholder="地点">
+                    </div>
+                </div>        
+                <div class="row">
+                    <div class="col long">
+                        <div class="form-group">
+                            <label class="label" for="">4a.货损类型</label>
+                            <div class="input-wrapper">
+                                <label class="radio-label">
+                                    <input name="4a" type="radio" value="普通货物" />
+                                    <i class="radio-icon"></i>
+                                    <span>普通货物</span>
+                                </label> 
+                                <label class="radio-label">
+                                    <input name="4a" type="radio" value="化工品" />
+                                    <i class="radio-icon"></i>
+                                    <span>化工品</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input name="4a" type="radio" value="项目货" />
+                                    <i class="radio-icon"></i>
+                                    <span>项目货</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input name="4a" type="radio" value="大件货" />
+                                    <i class="radio-icon"></i>
+                                    <span>大件货</span>
+                                </label>
+                            </div>
+                        </div>                          
+                    </div>  
+                    <div class="col long">
+                        <div class="form-group">
+                            <label class="label" for="">4b.货损类型</label>
+                            <div class="input-wrapper">
+                                <label class="radio-label">
+                                    <input name="4b" type="radio" value="集装箱货物" />
+                                    <i class="radio-icon"></i>
+                                    <span>集装箱货物</span>
+                                </label> 
+                                <label class="radio-label">
+                                    <input name="4b" type="radio" value="非集装箱货物" />
+                                    <i class="radio-icon"></i>
+                                    <span>非集装箱货物</span>
+                                </label>
+                            </div>
+                        </div>                          
+                    </div>   
+                </div>    
+                
+                <div class="form-group">
+                    <label class="label" for="">5.货损原因</label>
+                    <div class="input-wrapper column-wrapper">
+                        <label class="radio-label">
+                            <input name="5" type="radio" value="货物性质" />
+                            <i class="radio-icon"></i>
+                            <span>货物性质</span>
+                        </label> 
+                        <label class="radio-label">
+                            <input name="5" type="radio" value="外来原因" />
+                            <i class="radio-icon"></i>
+                            <span>外来原因</span>
+                        </label>
+                        <label class="radio-label">
+                            <input name="5" type="radio" value="意外操作/疏忽" />
+                            <i class="radio-icon"></i>
+                            <span>意外操作/疏忽</span>
+                        </label>   
+                        <label class="radio-label">
+                            <input name="5" type="radio" value="天灾" />
+                            <i class="radio-icon"></i>
+                            <span>天灾</span>
+                        </label>                                               
+                    </div>
+                </div>                    
+
+                <div class="form-group">
+                    <label class="label" for="">5a.货损原因描述</label>
+                    <div class="input-wrapper column-wrapper">
+                        <div class="textarea-tips">1.谁（分包商/客户）2.什么行为 3.导致结果 4.我的疑问</div>
+                        <textarea placeholder="请输入..."></textarea>
+                    </div>
+                </div>   
+
+                <div class="form-group">
+                    <label class="label" for="">6.是否申请查勘安排</label>
+                    <div class="input-wrapper">
+                        <label class="radio-label">
+                            <input name="6" type="radio" value="是" />
+                            <i class="radio-icon"></i>
+                            <span>是</span>
+                        </label> 
+                        <label class="radio-label">
+                            <input name="6" type="radio" value="否" />
+                            <i class="radio-icon"></i>
+                            <span>否</span>
+                        </label>
+                    </div>
+                </div> 
+
+            </div>            
         </div>
     </section>
 
@@ -228,6 +363,17 @@
             href && (window.location.href = href);
         });
 
+        // radio事件效果(时间原因，暂时的实现)
+        function bindRadioEvent (selector) {
+            $(selector).click(function(){
+                $(selector).siblings('.radio-icon').removeClass('checked');
+                $(selector + ':checked').siblings('.radio-icon').addClass('checked');
+            });
+        }
+        var radios = ['input[name="4a"]', 'input[name="4b"]', 'input[name="5"]', 'input[name="6"]'];
+        radios.forEach(function(item){
+            bindRadioEvent(item);
+        })
     })
 </script>
 </html>
