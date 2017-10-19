@@ -296,8 +296,49 @@
                         </label>
                     </div>
                 </div> 
+            </div>     
+            
+            <!-- 表单 -->
+            <div class="form-container no-border">
+                <div class="form-title">案件材料</div>
+                <div class="form-group">
+                    <label class="label" for="">1.提单/运单</label>
+                    <div class="file-upload-wrapper file1-wrapper">
+                        <div class="file-item">
+                            <span>登录2.jpg (79kb)</span>
+                            <i class="file-icon-delete"></i>
+                        </div>
+                    </div>                    
+                    <div class="input-wrapper">
+                        <label class="file-label">
+                            <input type="file" name="file1">
+                            <i class="file-icon"></i>
+                            <span>请选择或拖拽上传文件、限制每个20.0MB以内。</span>
+                        </label>
+                    </div>
+                </div>        
+                <div class="form-group">
+                    <label class="label" for="">2.商业发票</label>
+                    <div class="file-upload-wrapper file2-wrapper">
+                        <div class="file-item">
+                            <span>hellohehe.jpg (79kb)</span>
+                            <i class="file-icon-delete"></i>
+                        </div>
+                    </div>                    
+                    <div class="input-wrapper">
+                        <label class="file-label">
+                            <input type="file" name="file2">
+                            <i class="file-icon"></i>
+                            <span>请选择或拖拽上传文件、限制每个20.0MB以内。</span>
+                        </label>
+                    </div>
+                </div>                          
+            </div>
 
-            </div>            
+            <div class="submit-wrapper">
+                <div class="btn btn-submit">提交</div>
+                <div class="btn btn-cancel">放弃</div>
+            </div>
         </div>
     </section>
 
@@ -374,6 +415,17 @@
         radios.forEach(function(item){
             bindRadioEvent(item);
         })
+
+        // file控件事件(只是交互demo)
+        $('[name="file1"]').change(function(){
+            $('.file1-wrapper').addClass('active');
+        });
+        $('[name="file2"]').change(function(){
+            $('.file2-wrapper').addClass('active');
+        });        
+        $('.file-icon-delete').click(function(){
+            $(this).parent('.file-item').remove();
+        });
     })
 </script>
 </html>
