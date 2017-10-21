@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>公司网站</title>
+    <link rel="stylesheet" type="text/css" href="../css/law.css" />
+</head>
+<body>
+    <!-- header头 -->
+    <header>
+        <div class="container">
+            <!-- logo -->
+            <div class="brand"></div>
+            <!-- 导航 -->
+            <div class="nav">
+                <div class="nav-item" data-href="/">
+                    <span>首页</span>
+                </div>
+                <div class="nav-item">
+                    <span>买保险</span>
+                </div>    
+                <div class="nav-item">
+                    <span>快索赔</span>
+                </div> 
+                <div class="nav-item">
+                    <span>法律服务</span>
+                </div> 
+                <div class="nav-item">
+                    <span>信息咨询</span>
+                </div>                               
+            </div>
+            <!-- 导航登录 -->
+            <div class="nav-right">
+                <div class="nav-right-item login" data-href="/page/login.html">
+                    登录
+                </div>
+                <div class="nav-right-item register">
+                    注册
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- banner -->
+    <section class="view-law">
+        <div class="view-wrapper">
+            <!-- 左侧统计 -->
+            <div class="statistics-box">
+                <div class="statistics-text">
+                    已成功帮助了
+                </div>
+                <div class="statistics-num"></div>
+                <div class="statistics-text postfix-text">名顾客</div>
+            </div>            
+        </div>
+    </section>
+
+    <!-- 法律服务 -->
+    <section class="law-main">
+        <div class="service-wrapper">
+            <div class="service-title">
+                <div class="service-border"></div>
+                <div class="header1">法律服务需求提交</div>
+                <div class="header2">您的权利我们捍卫，您的利益我们保障</div>                
+            </div>
+            <div class="service-list">
+                <div class="service-item">
+                    <i class="icon-law-service-active"></i>
+                    <div class="item-bg bg-law1"></div>
+                    <div class="item-content">
+                        <div class="item-content-title"></div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="icon-law-service-active"></i>
+                    <div class="item-bg bg-law2"></div>
+                    <div class="item-content">
+                        <div class="item-content-title"></div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="icon-law-service-active"></i>
+                    <div class="item-bg bg-law3"></div>
+                    <div class="item-content">
+                        <div class="item-content-title"></div>
+                        <p></p>
+                    </div>
+                </div>         
+                <div class="service-item">
+                    <i class="icon-law-service-active"></i>
+                    <div class="item-bg bg-law4"></div>
+                    <div class="item-content">
+                        <div class="item-content-title"></div>
+                        <p></p>
+                    </div>
+                </div>   
+                <div class="service-item">
+                    <i class="icon-law-service-active"></i>
+                    <div class="item-bg bg-law5"></div>
+                    <div class="item-content">
+                        <div class="item-content-title"></div>
+                        <p></p>
+                    </div>
+                </div>             
+                <div class="service-item">
+                    <i class="icon-law-service-active"></i>
+                    <div class="item-bg bg-law6"></div>
+                    <div class="item-content">
+                        <div class="item-content-title"></div>
+                        <p></p>
+                    </div>
+                </div>                                          
+            </div>
+        </div>
+
+        <div class="law-form-wrapper">
+            <div class="form-detail">
+                <div class="pannel">
+                    <div class="pannel-header">
+                        <div class="pannel-title">
+                            <div class="pannel-border"></div>
+                            <div class="header1">法律咨询资料填写</div>
+                            <div class="header2">*注：填写表单时请先选择上方您所想要咨询的类别，我们可以更好地为您服务哦！</div>
+                        </div>
+                    </div>
+                    <div class="pannel-content">
+                        <div class="form-container no-border">
+                            <div class="form-group">
+                                <label class="label" for="">请选择您需要的服务项目</label>
+                                <div class="input-wrapper md">
+                                    <select name="service-select" id="">
+                                    </select>
+                                </div>
+                            </div>    
+                            <div class="form-group">
+                                <label class="label" for="">请描述您的需求</label>
+                                <div class="input-wrapper column-wrapper">
+                                    <div class="textarea-tips">1.产生背景2.预期达到的效果</div>
+                                    <textarea placeholder="请输入..."></textarea>
+                                </div>
+                            </div>     
+                            <div class="form-group">
+                                <label class="label" for="">上传相关材料</label>
+                                <div class="file-upload-wrapper file1-wrapper">
+                                    <div class="file-item">
+                                        <span>登录2.jpg (79kb)</span>
+                                        <i class="file-icon-delete"></i>
+                                    </div>
+                                </div>                    
+                                <div class="input-wrapper">
+                                    <label class="file-label">
+                                        <input type="file" name="file1">
+                                        <i class="file-icon"></i>
+                                        <span>请选择或拖拽上传文件、限制每个20.0MB以内。</span>
+                                    </label>
+                                </div>
+                            </div>                                                                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="law-detail">
+                <div class="law-header"></div>
+                <div class="law-content">
+                    <div class="law-des"></div>
+                    <!-- 清单(暂时只写了3个样式各自不一样law-bill，剩下的3个都是相同的样式，所有只要复制一下就好了) -->
+                    <div class="law-bill-wrapper">
+                        <div class="law-bill">
+                            <div class="bill-item">
+                                <div class="bill-item-title"></div>
+                                <div class="bill-item-box">
+                                    <div class="bill-name">最终费用</div>
+                                    <div class="bill-content">
+                                        <p>中文合同：<span class="bill-price">100</span>元/页</p>
+                                        <p>英文合同：<span class="bill-price">200</span>元/页</p>
+                                    </div>                                
+                                </div>
+                                <div class="bill-item-box">
+                                    <div class="bill-name">预付款</div>
+                                    <div class="bill-content">
+                                        <p>中文合同：<span class="bill-price">1000</span>元/页</p>
+                                        <p>英文合同：<span class="bill-price">2000</span>元/页</p>
+                                        <p>如对服务结果不满意，可申请退款。</p>
+                                        <p>按照<span class="bill-price">200</span>元/小时扣除服务费后，返还余额。</p>
+                                    </div>                                
+                                </div>
+                            </div>                        
+                        </div>
+
+                        <div class="law-bill">
+                            <div class="bill-item">
+                                <div class="bill-item-title">律师函</div>
+                                <div class="bill-item-box">
+                                    <div class="bill-name">最终收费</div>
+                                    <div class="bill-content">
+                                        <p>中文：<span class="bill-price">1000</span>元/页</p>
+                                        <p>英文：<span class="bill-price">2000</span>元/页</p>
+                                    </div>                                
+                                </div>
+                                <div class="bill-item-box">
+                                    <div class="bill-name">预付款</div>
+                                    <div class="bill-content">
+                                        <p>预付款：一页律师函费用</p>
+                                        <p class="bold">预付款不予退还</p>
+                                    </div>                                
+                                </div>
+                            </div>     
+                            <div class="bill-item">
+                                <div class="bill-item-title">正在拼单的法律调研报告有</div>
+                                <div class="bill-item-box">
+                                    <div class="bill-content-text">
+                                        <p class="p-16"><span class="bold">“一带一路”</span>下铁路运输合规性研究</p>
+                                        <p class="p-32">总价：<span class="bill-price">33</span>万 参团企业数：11</p>
+                                        <p class="p-32">拼单价格：<span class="bill-price">30000</span>元</p>
+
+                                        <p class="p-16"><span class="bold">“无单放货”</span>防范操作指南</p>
+                                        <p class="p-32">总价：<span class="bill-price">30</span>万 参团企业数：9</p>
+                                        <p class="p-32">拼单价格：<span class="bill-price">35000</span>元</p>
+                                    </div>                               
+                                </div>
+                            </div>                                                
+                        </div>
+
+                        <div class="law-bill">
+                            (暂时只写了3个样式各自不一样law-bill，剩下的3个都是相同的样式，所有只要复制一下就好了)    
+                        </div>   
+                        
+                        <div class="law-bill">
+                                (暂时只写了3个样式各自不一样law-bill，剩下的3个都是相同的样式，所有只要复制一下就好了)    
+                        </div>   
+                        
+                        <div class="law-bill">
+                                (暂时只写了3个样式各自不一样law-bill，剩下的3个都是相同的样式，所有只要复制一下就好了)    
+                        </div>   
+
+                        <div class="law-bill">
+                            <div class="bill-sperate-wrapper">
+                                <div class="bill-left">
+                                    <div class="bill-item">
+                                        <div class="bill-item-box">
+                                            <div class="bill-content no-name">
+                                                <p>单语报告：<span class="bill-price">2675</span>元/天</p>
+                                            </div>                                
+                                        </div>
+                                        <div class="bill-item-box">
+                                            <div class="bill-content no-name">
+                                                <p>双语报告：<span class="bill-price">2900</span>元/天</p>
+                                            </div>                                
+                                        </div>
+                                        <div class="bill-item-box">
+                                            <div class="bill-content no-name">
+                                                <p>产品经验：</p>
+                                                <p>根据产品类型以及实验室位置单独报价</p>
+                                            </div>                                
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bill-right">
+                                    <div class="bill-item">
+                                        <div class="bill-item-box">
+                                            <div class="bill-content no-name">
+                                                <p>预付款：<span class="bill-price">3000</span>元</p>
+                                                <p>如对服务效果不满意，可申请退款</p>
+                                                <p>按照<span class="bill-price">200</span>元/小时扣除服务费后，返还余额</p>
+                                            </div>                                
+                                        </div>
+                                    </div>                                    
+                                </div> 
+                            </div>                                 
+                        </div>   
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页尾 -->
+    <footer>
+        <div class="footer-main">
+            <div class="company-info">
+                <div class="company-logo"></div>
+                <div class="contact-way">
+                    <p><i class="icon-tel"></i><span>全国服务热线</span></p>
+                    <p class="tel">400-000-0000</p>
+                    <p><i class="icon-address"></i><span>上海市 浦东新区某某路某某号8楼</span></p>
+                    <p><i class="icon-email"></i><span>123123123@qq.com</span></p>
+                </div>
+            </div>
+            <div class="navigation">
+                <div class="nav-list">
+                    <div class="nav-line"></div>
+                    <div class="nav-item">首页</div>
+                    <div class="nav-item">买保险</div>
+                    <div class="nav-item">快索赔</div>
+                    <div class="nav-item">法律服务</div>
+                    <div class="nav-item">信息咨询</div>
+                </div>
+                <div class="nav-list horizontal">
+                    <div class="nav-line"></div>
+                    <div class="icon-list">
+                        <i class="icon-wb"></i>
+                        <i class="icon-wx"></i>
+                        <i class="icon-qq"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>版权所有 © 运可安科技有限公司 未经许可不得复制、转载或摘编，违者必究！</p>
+            <p>Copyright © PING AN INSURANCE(GROUP) COMPANY OF CHINA,LTD. All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+
+        // 模拟服务端业务的数据
+        var statisticsData = {
+            statistics: {
+                count: 123562
+            }
+        };
+
+        // 法律服务数据
+        var lawData = [
+            {
+                key: '0',
+                serviceName: '合同审核与起草',
+                serviceDes: '为您一一排除合同内容设计中的潜在风险。',
+                lawDes: '您的物流合同与您投保的保单是否相冲突，从而可能导致无法赔付或赔偿不足？不论是中文还是英文合同与保单的匹配，在此我们可以帮助您提前掌控风险。'
+            },
+            {
+                key: '1',
+                serviceName: '律师函/法律调研报告',
+                serviceDes: '国际各大物流公司专属律师团队，比专业更加专业。',
+                lawDes: '寻寻觅觅一个行业内的好律师，希望能省时、省力、省钱地为公司业务提供事前事后的防范与处理。与KBTECH配合的行业律师大咖们将大显神通。'
+            },
+            {
+                key: '2',
+                serviceName: '索赔抗辩与追偿',
+                serviceDes: '对方索赔函尺水丈波，资深法务为您抗辩，直击索赔方软肋。',
+                lawDes: '一纸索赔打破正常的工作节奏，各种时效不容有失，为了保障公司的经济利益，积极采取措施将后果减至最低，我们刻不容缓。'
+            },
+            {
+                key: '3',
+                serviceName: '法律咨询',
+                serviceDes: '10年以上经验资深法务主管，为您的案件提供全程/专业咨询意见。',
+                lawDes: '兵马未动，粮草先行，不打无准备之仗，君子无所争，其争也君子，如有争议，请先咨询。行业最优律师，在这里陪伴你。'
+            },
+            {
+                key: '4',
+                serviceName: '模板采购',
+                serviceDes: '法律及保险行业经典常用模板，省时又省心。',
+                lawDes: '好的范本文件可以使您的工作美观高效，事半功倍，实时更新的模板为您的工作如虎添翼，同时您再也不必为模板管理伤脑筋了。'
+            },
+            {
+                key: '5',
+                serviceName: '第三方检验安排',
+                serviceDes: '第三方检验安排定制属于您的专属检验服务。',
+                lawDes: '对于没有投保的货物，或者不在承保范围内的案件，检验需求将变得难以安排。今后，您不必担心零散的检验需求无人照料，通过KBTECH，专业细心的检验师无时无刻不在您的身边。'
+            }                   
+        ];
+
+        // 头部导航效果
+        $('.nav .nav-item').hover(
+            function(){
+                $(this).addClass('active').siblings().removeClass('active');
+            },
+            function(){
+                $(this).removeClass('active');
+            }
+        );
+
+        // 导航点击
+        $('.nav .nav-item').click(function(){
+            var href = $(this).data('href');
+            href && (window.location.href = href);
+        });
+        $('.nav-right .nav-right-item').click(function(){
+            var href = $(this).data('href');
+            href && (window.location.href = href);
+        });
+
+        // 渲染attach栏
+        function renderAttach(data) {
+            var maxLength = 7; // 最长7位数字
+            var count = ((data && data.count) || 0) + ''
+            var len = count.length;
+            var prefix0 = ''; // 左补0操作
+            if (len < maxLength) {
+                var diff = maxLength - len;
+                while (diff > 0) {
+                    diff--;
+                    prefix0 += '0';
+                }
+            } else { // 超过最大长度则舍弃低位数字
+                count = count.substring(0, maxLength)
+            }
+            count = prefix0 + count;
+            var html = ''; // 数字html片段
+            count.match(/\w/g).forEach(function(item){
+                html += '<span class="num-item">' + item + '</span>'
+            });
+            $('.statistics-num').html(html);
+        }
+
+        renderAttach(statisticsData.statistics);
+
+        // file控件事件(只是交互demo)
+        $('[name="file1"]').change(function(){
+            $('.file1-wrapper').addClass('active');
+        });
+        $('.file-icon-delete').click(function(){
+            $(this).parent('.file-item').remove();
+        });                
+
+        // 法律数据初始化
+        function renderLawData(){
+            // 法律表单中的select
+            var $select = $('[name="service-select"]');
+            var options = [];
+            lawData.forEach(function(item){
+                options.push('<option value="' + item.key + '">' + item.serviceName + '</option>')
+            });
+            $select.html(options);
+
+            // 法律服务
+            var $items = $('.service-list .service-item');
+            lawData.forEach(function(item){
+                var $currentItem = $items.eq(item.key);
+                $currentItem.find('.item-content-title').html(item.serviceName);
+                $currentItem.find('p').html(item.serviceDes);
+            });
+        }
+        renderLawData();
+
+        // 法律服务项的事件
+        $('.service-wrapper .service-item').click(function(){
+            var index = $(this).index();
+            $('[name="service-select"]').val(index);
+            switchLaw(index);
+        });
+
+        // 法律服务select的change事件
+        $('[name="service-select"]').change(function(){
+            var index = $(this).val();
+            switchLaw(index);
+        });
+
+        // 切换法律服务
+        function switchLaw(index) {
+            var lawItem = lawData[index];
+            $('.service-item:eq(' + index + ')').addClass('active').siblings().removeClass('active');
+            // 法律详情
+            var $lawDetail = $('.law-detail');
+            $lawDetail.find('.law-header').html(lawItem.serviceName);
+            $lawDetail.find('.law-des').html(lawItem.lawDes);
+            // 法律详情-bill清单
+            $('.law-bill-wrapper .law-bill').removeClass('active');
+            var $currentBill = $('.law-bill-wrapper').find('.law-bill:eq(' + index + ')');
+            $currentBill.addClass('active');
+        }
+        // 默认第0项选中
+        switchLaw(0);
+       
+    })
+</script>
+</html>

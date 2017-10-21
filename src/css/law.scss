@@ -1,0 +1,269 @@
+@import "./common/common.scss";
+@import "./common/rest.scss";
+
+// 常量
+$imgPath: '../img/';
+$pageSize: 1200;
+
+body {
+    background: #f2f2f2;
+}
+
+@import "./common/header.scss";
+
+// view-view
+.view-law {
+    width: 100%;
+    height: 400px;
+    @include background('#{$imgPath}law-banner.png');
+    background-size: auto;
+    .view-wrapper {
+        width: #{$pageSize}px;
+        height: 400px;
+        @include flex(center);
+        margin: 0 auto;
+        .statistics-box {
+            @include flex(flex-start, center);
+            margin-top: 310px;
+            @include font(18px, #ffffff, bold);
+            line-height: 1;
+            .statistics-num {
+                @include flex();
+                margin-left: 10px;
+                .num-item {
+                    width: 20px;
+                    height: 32px;
+                    line-height: 32px;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #ffffff;
+                    background: #008cd6;
+                    text-align: center;
+                    margin-left: 2px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+            .statistics-text {
+                &.postfix-text {
+                    margin-left: 8px;
+                }                
+            }            
+        }
+    }
+}
+
+.law-main {
+    width: #{$pageSize}px;
+    margin: 30px auto 40px;    
+    .service-wrapper {
+        .service-title {
+            @include flex(flex-start, flex-end);
+            margin-bottom: 20px;
+            line-height: 1;
+            .service-border {
+                width: 4px;
+                height: 20px;
+                background: black;
+            }
+            .header1 {
+                margin-left: 16px;
+                @include font(20px, #161616);
+            }
+            .header2 {
+                margin-left: 10px;
+                @include font(14px, #161616);
+            }
+        }
+        .service-list {
+            @include flex(space-around, flex-start, wrap);
+            margin-top: 20px;
+            .service-item {
+                position: relative;
+                width: 386px;
+                height: 220px;
+                @include flex();
+                background: #ffffff;
+                margin-bottom: 10px;
+                cursor: pointer;
+                .icon-law-service-active {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 60px;
+                    height: 60px;
+                    @include background('#{$imgPath}icon-law-service-active.png');
+                }
+                .item-bg {
+                    width: 100px;
+                    height: 100px;
+                    margin-top: 60px;
+                    margin-left: 30px;
+                    @for $index from 1 to 7 {
+                        &.bg-law#{$index} {
+                            @include background('#{$imgPath}icon-law#{$index}.png');
+                        }
+                    }
+                }
+                .item-content {
+                    width: 218px;
+                    margin-left: 18px;
+                    margin-top: 68px;
+                    line-height: 1;
+                    .item-content-title {
+                        @include font(22px, #161616);
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        @include font(16px, #161616);
+                    }
+                }
+                &.active {
+                    background: #008cd6;
+                    color: #ffffff;
+                    .item-content-title {
+                        color: #ffffff !important;
+                    }
+                    p {
+                        color: #ffffff !important;
+                    }
+                    .icon-law-service-active {
+                        display: block;
+                    }
+                    @for $index from 1 to 7 {
+                        .bg-law#{$index} {
+                            @include background('#{$imgPath}icon-law#{$index}-active.png');
+                        }
+                    }                
+                }                
+            }
+        }        
+    }
+    .law-form-wrapper {
+        margin-top: 20px;
+        @include flex(flex-start, stretch);
+        .form-detail {
+            width: 820px;
+            .pannel {
+                margin: 0;
+                width: auto;
+            }
+            .pannel-header {
+                border-bottom: 1px solid #c1c1c1;
+                .header2 {
+                    font-size: 14px;
+                }
+            }
+        }
+        .law-detail {
+            width: 380px;
+            background: #fafafa;
+            .law-header {
+                height: 86px;
+                border-bottom: 1px solid #c1c1c1;
+                @include font(18px, #161616);
+                line-height: 1;
+                padding-top: 54px;
+                padding-left: 20px;
+            }
+            .law-content {
+                padding: 20px 20px 0;
+                .law-des {
+                    @include font(16px, #666666);
+                }
+                .law-bill {
+                    display: none;
+                    margin-top: 14px;
+                    &.active {
+                        display: block;
+                    }
+                    .bill-item {
+                        .bill-item-title {
+                            @include font(16px, #ba947d, bold);
+                            line-height: 1;
+                            margin-bottom: 4px;
+                        }
+                        .bill-item-box {
+                            @include flex(flex-start, center);
+                            margin-bottom: 4px;
+                            min-height: 50px;
+                            line-height: 1;
+                            background: #ebebeb;
+                            .bill-name {
+                                flex: 0 0 auto;
+                                width: 130px;
+                                padding-left: 16px;
+                                @include font(16px, #666666, bold);
+                            }
+                            .bill-content {
+                                padding: 8px 14px 8px 0;
+                                p {
+                                    @include font(14px, #666666);
+                                    .bill-price {
+                                        @include font(16px, #ff0000, bold);
+                                        padding: 0 2px;
+                                        &.sm {
+                                            @include font(14px, #ff0000, bold);
+                                        }
+                                    }
+                                    &.bold {
+                                        font-weight: bold;
+                                    }
+                                }
+                                p + p {
+                                    margin-top: 6px;
+                                }
+                                &.no-name {
+                                    padding: 8px 4px 8px 16px;
+                                }
+                            }
+                            .bill-content-text {
+                                padding: 8px 0;
+                                line-height: initial;
+                                p {
+                                    @include font(14px, #161616);
+                                    .bold {
+                                        font-weight: bold;
+                                    }
+                                }
+                                .p-16 {
+                                    padding-left: 16px;
+                                }
+                                .p-32 {
+                                    padding-left: 32px;
+                                }
+                                .bill-price {
+                                    @include font(14px, #ff0000, bold);
+                                    padding: 0 2px;
+                                }                                
+                            }
+                        }
+                    }
+                    .bill-item + .bill-item {
+                        margin-top: 14px;
+                    }
+                    .bill-sperate-wrapper {
+                        @include flex(flex-start, stretch);
+                        .bill-left {
+                            width: 170px;
+                        }
+                        .bill-right {
+                            width: 166px;
+                            padding-left: 4px;
+                            .bill-item-box {
+                                height: 172px;
+                            }
+                            .bill-content {
+                                padding: 45px 8px 0;
+                            }
+                        }
+                    }
+                }     
+            }
+        }
+    }
+}
+
+@import "./common/footer.scss";
