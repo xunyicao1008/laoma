@@ -15,7 +15,7 @@ gulp.task('dev', function(){
 
 // 编译
 gulp.task('build', ['clean'], function(){
-    gulp.start(['build-css', 'build-js', 'build-img', 'build-page'], function(){
+    gulp.start(['build-css', 'build-js', 'build-font', 'build-img', 'build-page', 'build-mock'], function(){
         console.log('静态编译 success')
     })  
 });
@@ -33,6 +33,18 @@ gulp.task('build-css', function(){
 gulp.task('build-js', function(){
     return gulp.src(config.js.src)
     .pipe(gulp.dest(config.js.dist))
+});
+
+// 移动font
+gulp.task('build-font', function(){
+    return gulp.src(config.font.src)
+    .pipe(gulp.dest(config.font.dist))
+});
+
+// 移动mock
+gulp.task('build-mock', function(){
+    return gulp.src(config.mock.src)
+    .pipe(gulp.dest(config.mock.dist))
 });
 
 // 移动page

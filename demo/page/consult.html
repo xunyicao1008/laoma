@@ -191,6 +191,23 @@
 
 </body>
 <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/mustache.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<!-- 字符串模版 -->
+<script id="news-item-temp" type="text/template">
+    {{#newsList}}
+    <div class="news-item">
+        <div class="news-bg"></div>
+        <div class="news-detail">
+            <div class="news-title">
+                {{title}}
+            </div>
+            <p class="news-content">{{content}}</p>
+            <p class="news-date">{{date}}</p>
+        </div>
+    </div>
+    {{/newsList}}
+</script>
 <script type="text/javascript">
     $(document).ready(function(){
 
@@ -233,6 +250,35 @@
             }  
         )
        
+        // ajax + 数据渲染范例
+        $.get('/mock/test.data', function(data){
+            console.log(123132123)
+            // 模拟json返回的数据
+            // var result = data
+            var result = [
+                {
+                    title: '[投保秘典]精准解决方案',
+                    content: '百度上市后safasdsf百度上市后',
+                    date: '2017-09-28'
+                },
+                {
+                    title: '[投保秘典]精准解决方案',
+                    content: '百度上市后safasdsf百度上市后',
+                    date: '2017-09-28'
+                },
+                {
+                    title: '[投保秘典]精准解决方案',
+                    content: '百度上市后safasdsf百度上市后',
+                    date: '2017-09-28'
+                }
+            ]
+            mstRender({
+                selector: '.news-list',
+                data: {newsList: result},
+                templete: '#news-item-temp'
+            });
+            console.log(123)
+        });
     })
 </script>
 </html>

@@ -14,9 +14,19 @@ var js = {
     dist: './dist/js'
 }
 
+var font = {
+    src: './src/font/**',
+    dist: './dist/font'
+}
+
 var img = {
     src: './src/img/*',
     dist: './dist/img'    
+}
+
+var mock = {
+    src: './src/mock/*',
+    dist: './dist/mock'    
 }
 
 var page = {
@@ -35,5 +45,7 @@ module.exports = {
     js,
     img,
     page,
-    demo
+    demo,
+    font,
+    mock
 }

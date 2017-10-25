@@ -15,7 +15,7 @@
             <div class="brand"></div>
             <!-- 导航 -->
             <div class="nav">
-                <div class="nav-item" data-href="/">
+                <div class="nav-item current-item" data-href="/">
                     <span>首页</span>
                 </div>
                 <div class="nav-item">
@@ -520,6 +520,16 @@
         }
 
         renderAttach(data.statistics);
+
+        // 模拟投保数量不断增加的方法
+        (function mockStatisticsNum (second) {
+            setInterval(function(){
+                var random = Math.floor((Math.random()*100)+1);
+                data.statistics.count += random;
+                renderAttach(data.statistics);
+            }, second * 1000);
+        })(10);
+
     })
 </script>
 </html>

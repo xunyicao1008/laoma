@@ -3,6 +3,11 @@
 $imgPath: '../img/';
 $pageSize: 1200;
 
+@font-face { 
+    font-family: jiqi; 
+    src: url('../../font/UnidreamLED.ttf'); 
+} 
+
 // 面板
 .pannel {
     width: #{$pageSize}px;
