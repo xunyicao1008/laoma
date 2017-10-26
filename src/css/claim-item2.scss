@@ -1,0 +1,47 @@
+@import "./common/common.scss";
+@import "./common/rest.scss";
+
+// 常量
+$imgPath: '../img/';
+$pageSize: 1200;
+
+body {
+    background: #f2f2f2;
+}
+
+@import "./common/header.scss";
+
+// banner-view
+.banner-view {
+    width: 100%;
+    height: 400px;
+    @include background('#{$imgPath}claim-item2-banner.png');
+    background-size: auto;
+}
+
+.img-view {
+    width: 100%;
+    &.view1 {
+        height: 1033px;
+        @include background('#{$imgPath}img-view-claim-item2-1.png');
+        background-size: auto;
+    }
+    &.view2 {
+        height: 839px;
+        @include background('#{$imgPath}img-view-claim-item2-2.png');
+        background-size: auto;
+    }
+    &.view3 {
+        height: 758px;
+        @include background('#{$imgPath}img-view-claim-item2-3.png');
+        background-size: auto;
+    }
+    &.view4 {
+        height: 1027px;
+        @include background('#{$imgPath}img-view-claim-item2-4.png');
+        background-size: auto;
+    }
+}
+
+
+@import "./common/footer.scss";

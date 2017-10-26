@@ -1,0 +1,41 @@
+@import "./common/common.scss";
+@import "./common/rest.scss";
+
+// 常量
+$imgPath: '../img/';
+$pageSize: 1200;
+
+body {
+    background: #f2f2f2;
+}
+
+@import "./common/header.scss";
+
+// banner-view
+.banner-view {
+    width: 100%;
+    height: 400px;
+    @include background('#{$imgPath}about-us-banner.png');
+    background-size: auto;
+}
+
+.img-view {
+    width: 100%;
+    &.view1 {
+        height: 1029px;
+        @include background('#{$imgPath}img-view-about-us-1.png');
+        background-size: auto;
+    }
+    &.view2 {
+        height: 1129px;
+        @include background('#{$imgPath}img-view-about-us-2.png');
+        background-size: auto;
+    }
+    &.view3 {
+        height: 705px;
+        @include background('#{$imgPath}img-view-about-us-3.png');
+        background-size: auto;
+    }
+}
+
+@import "./common/footer.scss";
