@@ -67,7 +67,28 @@
                 <div class="statistics-text">
                     截至目前为止投保单数 :
                 </div>
-                <div class="statistics-num"></div>
+                <div class="statistics-num">
+                    <div class="num-item">
+                        <div class="item-tag-list">
+                            <div class="tag">0</div>
+                            <div class="tag">1</div>
+                            <div class="tag">2</div>
+                            <div class="tag">3</div>
+                            <div class="tag">4</div>
+                            <div class="tag">5</div>
+                            <div class="tag">6</div>
+                            <div class="tag">7</div>
+                            <div class="tag">8</div>
+                            <div class="tag">9</div>
+                        </div>
+                    </div>
+                    <div class="num-item">3</div>
+                    <div class="num-item">4</div>
+                    <div class="num-item">5</div>
+                    <div class="num-item">0</div>
+                    <div class="num-item">1</div>
+                    <div class="num-item">9</div>
+                </div>
                 <div class="statistics-text postfix-text">单</div>
             </div>
             <!-- 右侧日期 -->
@@ -406,7 +427,7 @@
         // 模拟服务端业务的数据
         var data = {
             statistics: {
-                count: 123562,
+                count: 1023562,
                 date: '2017-09-28'
             }
         };
@@ -512,8 +533,13 @@
             }
             count = prefix0 + count;
             var html = ''; // 数字html片段
-            count.match(/\w/g).forEach(function(item){
-                html += '<span class="num-item">' + item + '</span>'
+            count.match(/\w/g).forEach(function(num){
+                var tags = '';
+                var top = -(32 * num) + 'px'
+                for (var i = 0; i <= 10; i++) {
+                    tags += '<div class="tag">' + i + '</div>'
+                }
+                html += '<div class="num-item"><div class="item-tag-list" style="top:' + top + '">' + tags + '</div></div>'
             });
             $('.statistics-num').html(html);
             $('.attach .date-box .statistics-text span').html(data.date);
@@ -522,13 +548,17 @@
         renderAttach(data.statistics);
 
         // 模拟投保数量不断增加的方法
-        (function mockStatisticsNum (second) {
+        (function mockStatisticsNum (second, min, max) {
             setInterval(function(){
-                var random = Math.floor((Math.random()*100)+1);
-                data.statistics.count += random;
-                renderAttach(data.statistics);
+                var random = Math.floor((Math.random() * max) + min);
+                data.statistics.count += random
+                var num = data.statistics.count.toString(10);
+                for (var i = 0; i < num.length; i++) {
+                    var top = -(32 * parseInt(num[i])) + 'px'
+                    $('.num-item').eq(i).find('.item-tag-list').animate({top: top}, 1000)
+                }
             }, second * 1000);
-        })(10);
+        })(3, 1, 1000);
 
     })
 </script>
