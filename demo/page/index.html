@@ -535,7 +535,7 @@
             var html = ''; // 数字html片段
             count.match(/\w/g).forEach(function(num){
                 var tags = '';
-                var top = -(32 * num) + 'px'
+                var top = -(38 * num) + 'px'
                 for (var i = 0; i <= 10; i++) {
                     tags += '<div class="tag">' + i + '</div>'
                 }
@@ -554,7 +554,7 @@
                 data.statistics.count += random
                 var num = data.statistics.count.toString(10);
                 for (var i = 0; i < num.length; i++) {
-                    var top = -(32 * parseInt(num[i])) + 'px'
+                    var top = -(38 * parseInt(num[i])) + 'px'
                     $('.num-item').eq(i).find('.item-tag-list').animate({top: top}, 1000)
                 }
             }, second * 1000);
