@@ -264,13 +264,18 @@
         (function initNavStatus(){
             var pathName = window.location.pathname;
             var paths = pathName.split('/');
-            var pageName = paths[paths.length - 1].split('.')[0] || '/';
+            var url = paths[paths.length - 1].split('.')[0] || '/';
             $('.nav-item').each(function(){
-                if($(this).data('page-name') === pageName) {
-                    $(this).addClass('current-item');
-                }
+                if (!$(this).data('page-name')) return
+                var pageName = $(this).data('page-name').split(',');
+                var self = this;
+                pageName.forEach(function(item){
+                    if(item === url) {
+                        $(self).addClass('current-item');
+                    }
+                });
             })
-        })();        
+        })();     
 
         // 客服的hover效果
         $('.custom-service .custom-service-item').hover(

@@ -213,7 +213,7 @@
             </div>
             <div class="new-trend-container">
                 <div class="title-line">
-                    <div class="title">快看，说好的投资人见面会如约而至</div>
+                    <div class="title" data-href="page/insurance.html">快看，说好的投资人见面会如约而至</div>
                     <div class="date">2017-09-28</div>
                 </div>
                 <div class="content">
@@ -232,17 +232,17 @@
                         <div class="tab-item active" data-tab-type="notice">平台公告</div>
                         <div class="tab-item" data-tab-type="trend">咨询动态</div>
                     </div>
-                    <div class="more-link">查看更多></div>
+                    <div class="more-link" data-href="page/insurance.html">查看更多></div>
                 </div>
                 <div class="box-content tab-notice active">
-                    <div class="message-item">
+                    <div class="message-item" data-href="page/insurance.html">
                         <div class="item-title">
                             <span class="item-icon"></span>
                             <span>史带财险规模收缩转型路:退出车险裁员九成</span>
                         </div>
                         <div class="item-date">2017-09-28</div>
                     </div>
-                    <div class="message-item">
+                    <div class="message-item" data-href="page/insurance.html">
                         <div class="item-title">
                             <span class="item-icon"></span>
                             <span>史带财险规模收缩转型路:退出车险裁员九成</span>
@@ -273,7 +273,7 @@
                 </div>
 
                 <div class="box-content tab-trend">
-                    <div class="message-item">
+                    <div class="message-item" data-href="page/insurance.html">
                         <div class="item-title">
                             <span class="item-icon"></span>
                             <span>123123123132132123</span>
@@ -308,7 +308,7 @@
                 <div class="faq-icon"></div>
                 <div class="faq-head">
                     <div class="head-title">常见问题</div>
-                    <div class="more-link">查看更多></div>
+                    <div class="more-link" data-href="page/insurance.html">查看更多></div>
                 </div>
                 <div class="faq-content">
                     <div class="faq-main">
@@ -319,8 +319,8 @@
                         </div>
                     </div>
                     <div class="faq-list">
-                        <div class="faq-item">投保相关问题</div>
-                        <div class="faq-item">关于理赔相关问题</div>
+                        <div class="faq-item" data-href="page/insurance.html">投保相关问题</div>
+                        <div class="faq-item" data-href="page/insurance.html">关于理赔相关问题</div>
                     </div>
                 </div>
             </div>
@@ -383,7 +383,12 @@
     <footer>
         <div class="footer-main">
             <div class="company-info">
-                <div class="company-logo"></div>
+                <div class="company-logo-wrapper">
+                    <div class="company-logo"></div>
+                    <div class="company-logo2"></div>
+                    <div class="company-logo3"></div>
+                    <div class="company-logo4"></div>
+                </div> 
                 <div class="contact-way">
                     <p>恪保网络科技(上海)有限公司</p>
                     <p>历索企业管理咨询(上海)有限公司<e>(恪保科技成员企业)</e></p>
@@ -460,11 +465,16 @@
         (function initNavStatus(){
             var pathName = window.location.pathname;
             var paths = pathName.split('/');
-            var pageName = paths[paths.length - 1].split('.')[0] || '/';
+            var url = paths[paths.length - 1].split('.')[0] || '/';
             $('.nav-item').each(function(){
-                if($(this).data('page-name') === pageName) {
-                    $(this).addClass('current-item');
-                }
+                if (!$(this).data('page-name')) return
+                var pageName = $(this).data('page-name').split(',');
+                var self = this;
+                pageName.forEach(function(item){
+                    if(item === url) {
+                        $(self).addClass('current-item');
+                    }
+                });
             })
         })();
         
@@ -585,6 +595,27 @@
                 }
             }, second * 1000);
         })(3, 1, 1000);
+
+        //动态区域点击事件
+        $('.new-trend-container .title').click(function(){
+            triggerLink($(this));
+        });
+        $('.trend-container .more-link').click(function(){
+            triggerLink($(this));
+        });
+        $('.trend-container .message-item').click(function(){
+            triggerLink($(this));
+        });
+        $('.faq-box .faq-item').click(function(){
+            triggerLink($(this));
+        });
+
+        function triggerLink ($el) {
+            var path = $el && $el.data('href');
+            if (path) {
+                window.open(path);
+            }
+        }
 
     })
 </script>

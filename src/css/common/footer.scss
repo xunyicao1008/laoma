@@ -15,10 +15,31 @@ footer {
         @include flex(space-between);
         .company-info {
             padding-top: 50px;
-            .company-logo {
-                width: 128px;
-                height: 42px;
-                @include background('#{$imgPath}brand-v2.png');
+            .company-logo-wrapper {
+                @include flex();
+                .company-logo {
+                    width: 128px;
+                    height: 42px;
+                    @include background('#{$imgPath}brand-v2.png');
+                }
+                .company-logo2 {
+                    margin-left: 20px;
+                    width: 128px;
+                    height: 42px;
+                    @include background('#{$imgPath}brand-v2.png');
+                }  
+                .company-logo3 {
+                    margin-left: 20px;
+                    width: 128px;
+                    height: 42px;
+                    @include background('#{$imgPath}brand-v2.png');
+                } 
+                .company-logo4 {
+                    margin-left: 20px;
+                    width: 128px;
+                    height: 42px;
+                    @include background('#{$imgPath}brand-v2.png');
+                }                 
             }
             .contact-way {
                 padding-top: 14px;
