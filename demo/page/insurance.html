@@ -18,7 +18,7 @@
                 <div class="nav-item" data-href="/">
                     <span>首页</span>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item" data-page-name="insurance">
                     <span>买保险</span>
                 </div>    
                 <div class="nav-item">
@@ -259,6 +259,18 @@
             var href = $(this).data('href');
             href && (window.location.href = href);
         });
+
+        // 导航状态与路径的匹配
+        (function initNavStatus(){
+            var pathName = window.location.pathname;
+            var paths = pathName.split('/');
+            var pageName = paths[paths.length - 1].split('.')[0] || '/';
+            $('.nav-item').each(function(){
+                if($(this).data('page-name') === pageName) {
+                    $(this).addClass('current-item');
+                }
+            })
+        })();        
 
         // 客服的hover效果
         $('.custom-service .custom-service-item').hover(

@@ -15,10 +15,10 @@
             <div class="brand"></div>
             <!-- 导航 -->
             <div class="nav">
-                <div class="nav-item current-item" data-href="/">
+                <div class="nav-item" data-page-name="/">
                     <span>首页</span>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item" data-page-name="insurance">
                     <span>买保险</span>
                 </div>    
                 <div class="nav-item">
@@ -179,20 +179,20 @@
                     <p class="box3">></p>
                 </div>
             </div>
-            <div class="platform-item item-style-4">
+            <div class="platform-item item-style-4" data-href="/page/claim-item1.html">
                 <div class="item-content">
                     <p class="box1">专业理赔</p>
                     <p class="box2">专属的理赔顾问</p>
                 </div>
             </div> 
-            <div class="platform-item item-style-5">
+            <div class="platform-item item-style-5" data-href="/page/claim-item2.html">
                 <div class="item-content">
                     <p class="box1">理赔法务咨询服务</p>
                     <p class="box2">￥<span class="bigger">40</span>起/年</p>
                     <img class="item-img1" src="../img/platform-item-kf.png" alt="无船承运人责任险">
                 </div>
             </div>    
-            <div class="platform-item item-style-5">
+            <div class="platform-item item-style-5" data-href="/page/claim-item3.html">
                 <div class="item-content">
                     <p class="box1">理赔法务咨询服务</p>
                     <p class="box2">￥<span class="bigger">46.5</span>起/年</p>
@@ -455,6 +455,19 @@
             var href = $(this).data('href');
             href && (window.location.href = href);
         });
+
+        // 导航状态与路径的匹配
+        (function initNavStatus(){
+            var pathName = window.location.pathname;
+            var paths = pathName.split('/');
+            var pageName = paths[paths.length - 1].split('.')[0] || '/';
+            $('.nav-item').each(function(){
+                if($(this).data('page-name') === pageName) {
+                    $(this).addClass('current-item');
+                }
+            })
+        })();
+        
         
         // banner按钮效果
         $('.banner .banner-btn').hover(
@@ -492,6 +505,15 @@
                 $(this).removeClass('active');
             }            
         );   
+
+        // 平台栏的点击事件
+        $('.platform .platform-item').click(function(){
+            var href = $(this).data('href');
+            if (href) {
+                window.open(href);
+                // window.location.href = href;
+            }
+        });
         
         // 客服的hover效果
         $('.custom-service .custom-service-item').hover(
