@@ -22,22 +22,22 @@ body {
 .img-view {
     width: 100%;
     &.view1 {
-        height: 1033px;
+        height: 1055px;
         @include background('#{$imgPath}img-view-claim-item2-1.png');
         background-size: auto;
     }
     &.view2 {
-        height: 839px;
+        height: 1214px;
         @include background('#{$imgPath}img-view-claim-item2-2.png');
         background-size: auto;
     }
     &.view3 {
-        height: 758px;
+        height: 910px;
         @include background('#{$imgPath}img-view-claim-item2-3.png');
         background-size: auto;
     }
     &.view4 {
-        height: 1027px;
+        height: 605px;
         @include background('#{$imgPath}img-view-claim-item2-4.png');
         background-size: auto;
     }
