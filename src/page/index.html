@@ -359,9 +359,34 @@
     <!-- 客服 -->
     <section class="custom-service-wrapper">
         <div class="custom-service">
-            <div class="custom-service-item">
-                <i class="icon-cs-girl"></i>
-                <p>在线客服</p>
+            <div class="custom-service-cs-wrapper">
+                <div class="custom-service-item">
+                    <i class="icon-cs-girl"></i>
+                    <p>在线客服</p>
+                </div>
+                <div class="custom-service-cs-pop">
+                    <div class="cs-content">
+                        <p>
+                            <i class="icon-cs-mobile"></i>
+                            <span>投保客服一</span>
+                        </p>
+                        <p>
+                            <i class="icon-cs-qq"></i>
+                            <span>投保客服二</span>
+                        </p>    
+                        <p>
+                            <i class="icon-cs-qq"></i>
+                            <span>理赔客服一</span>
+                        </p>
+                        <p>
+                            <i class="icon-cs-qq"></i>
+                            <span>理赔客服二</span>
+                        </p>                                            
+                    </div>
+                    <div class="cs-tail">
+                        <i class="icon-cs-tail"></i>
+                    </div>
+                </div> 
             </div>
             <div class="custom-service-tel-wrapper">
                 <div class="custom-service-item">
@@ -541,6 +566,23 @@
             },
             function(){
                 $(this).find('.custom-service-tel-pop').removeClass('active');
+            }  
+        )
+        // 客服人员的hover效果
+        $('.custom-service .custom-service-cs-wrapper').hover(
+            function(){
+                $(this).find('.custom-service-cs-pop').addClass('active');
+            },
+            function(){
+                $(this).find('.custom-service-cs-pop').removeClass('active');
+            }  
+        )
+        $('.custom-service .custom-service-cs-wrapper p').hover(
+            function(){
+                $(this).addClass('active');
+            },
+            function(){
+                $(this).removeClass('active');
             }  
         )
 

@@ -292,5 +292,65 @@ $pageSize: 1200;
                 }
             }            
         }
+        .custom-service-cs-wrapper {
+            position: relative;
+            .custom-service-cs-pop {
+                display: none;
+                position: absolute;
+                right: 122px;
+                top: 0px;
+                width: 180px;
+                &.active {
+                    display: block;
+                }
+                .cs-content {
+                    background: #f6f6f6;
+                    border-radius: 8px;
+                    padding: 10px 20px;
+                    p {
+                        width: 140px;
+                        height: 40px;
+                        line-height: 40px;
+                        @include font(16px, #666666, bold);
+                        border-bottom: 1px solid #e5e5e5;
+                        @include flex(flex-start, center);
+                        cursor: pointer;
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                        &.active {
+                            background: #e5e5e5;
+                            border-bottom: none;
+                        }
+                        i {
+                            width: 24px;
+                            height: 24px;
+                            margin-left: 14px;
+                            &.icon-cs-mobile {
+                                @include background('#{$imgPath}icon-cs-mobile.png');
+                            }
+                            &.icon-cs-qq {
+                                @include background('#{$imgPath}icon-cs-qq.png');
+                            }
+                        }
+                        span {
+                            margin-left: 6px;
+                        }
+                    }
+                }
+                .cs-tail {
+                    position: absolute;
+                    right: -10px;
+                    top: 42px;
+                    .icon-cs-tail {
+                        display: block;
+                        width: 10px;
+                        height: 20px;
+                        @include background('#{$imgPath}icon-cs-tail.png');
+                    }
+                }
+            }
+
+        }
     }
 }
