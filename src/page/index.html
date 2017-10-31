@@ -562,6 +562,7 @@
         // 客服电话的hover效果
         $('.custom-service .custom-service-tel-wrapper').hover(
             function(){
+                $('.custom-service .custom-service-cs-wrapper .custom-service-cs-pop').removeClass('active');
                 $(this).find('.custom-service-tel-pop').addClass('active');
             },
             function(){
@@ -569,12 +570,19 @@
             }  
         )
         // 客服人员的hover效果
+        var csBusying = false
         $('.custom-service .custom-service-cs-wrapper').hover(
             function(){
+                csBusying = true
                 $(this).find('.custom-service-cs-pop').addClass('active');
             },
             function(){
-                $(this).find('.custom-service-cs-pop').removeClass('active');
+                var self = this
+                csBusying = false
+                setTimeout(function(){
+                    if (csBusying) return
+                    $(self).find('.custom-service-cs-pop').removeClass('active');
+                }, 500)
             }  
         )
         $('.custom-service .custom-service-cs-wrapper p').hover(
